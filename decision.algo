@@ -1,0 +1,48 @@
+def is_leap_year(year):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
+
+year = int(input("Enter a year: "))
+if is_leap_year(year):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+    /*second point*/
+    age = int(input("Enter your age: "))
+
+if age <= 12:
+    ticket_price = 10
+elif 13 <= age <= 17:
+    ticket_price = 15
+else:
+    ticket_price = 20
+
+print(f"The price of the ticket for your age ({age}) is ${ticket_price}.")
+/* third point*/
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    else:
+        return base * power(base, exponent - 1)
+
+base = int(input("Enter the base number: "))
+exponent = int(input("Enter the exponent: "))
+
+result = power(base, exponent)
+print(f"{base} raised to the power of {exponent} is: {result}")
+/*fourth */
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n = int(input("Enter the value of n to find the nth Fibonacci number: "))
+
+if n < 0:
+    print("Please enter a positive integer.")
+else:
+    fib_number = fibonacci(n)
+    print(f"The {n}th Fibonacci number is: {fib_number}")
